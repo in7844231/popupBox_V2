@@ -1,0 +1,66 @@
+/* -- Animation stuff -- */
+#popupBox-christmas {
+  animation-name: box-fadeIn;
+  animation-duration: 4s;
+}
+
+#popupBox-christmas {
+  position: absolute;
+  bottom: 2%;
+  opacity: 1;
+}
+
+@keyframes box-fadeIn {
+  0% {
+    opacity: 0.5;
+    bottom: 0%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 2%;
+  }
+}
+
+.popupBox-wrapper {
+  background-color: yellow;
+  border: solid 2px #000000;
+  border-radius: 10px;
+  width: 450px;
+  min-height: 150px;
+  padding: 20px 20px 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.popupBox-title {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.popupBox-msgto {
+  display: inline-block;
+  text-align: left;
+}
+
+.popupBox-msg-from {
+  align-self: flex-end;
+}
+
+.popupBox-msg-desc {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.popupBox-stamp {
+  position: absolute;
+  align-self: flex-end;
+}
+
+.popupBox-stamp img {
+  width: 40px;
+  height: 40px;
+}
