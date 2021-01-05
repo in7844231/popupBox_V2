@@ -1,6 +1,6 @@
 /* -- Animation stuff -- */
-#popupBox-christmas {
-  animation-name: box-fadeIn;
+#popupBox-christmas[data-animation="slideUp"] {
+  animation-name: slide-up;
   animation-duration: 4s;
 }
 
@@ -8,9 +8,22 @@
   position: absolute;
   bottom: 2%;
   opacity: 1;
+  display: none;
 }
 
-@keyframes box-fadeIn {
+#popupBox-newyear[data-animation="slideDown"] {
+  animation-name: slide-down;
+  animation-duration: 4s;
+}
+
+#popupBox-newyear {
+  position: absolute;
+  top: 2%;
+  opacity: 1;
+  /*display: none;*/
+}
+
+@keyframes slide-up {
   0% {
     opacity: 0.5;
     bottom: 0%;
@@ -18,6 +31,17 @@
   100% {
     opacity: 1;
     bottom: 2%;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0.5;
+    top: 0%;
+  }
+  100% {
+    opacity: 1;
+    top: 2%;
   }
 }
 
